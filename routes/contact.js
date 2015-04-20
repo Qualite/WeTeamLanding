@@ -20,7 +20,7 @@ router.post('/', function(req, res, next) {
   transport.sendMail({
     secureConnection: true,
     from: cfg.auth.user,
-    to: "hello@weteam.pro",
+    to: "alxey@weteam.pro",
     subject: subject,
     text: 'Имя: ' + req.body.name + '\nЭл. адрес: ' + req.body.email + '\nТелефон: ' + req.body.phone + '\nКомментарий: ' + req.body.comment
   }, function(err, response) {

@@ -12,7 +12,7 @@
             <a href="files/weteam_portfolio.pdf">Скачать портфолио</a>
         </div>
         <div class="download l">
-            <a href="" id="send">Написать нам</a>
+            <a href="" id="send" onclick="openLoginForm();  return false;">Написать нам</a>
         </div>
     </div>
     <div class="clr"></div>
@@ -24,26 +24,29 @@
 
 <form id="form">
     <div class="-fade"></div>
-
     <div class="-content">
-        <div class="-row">
-            <input type="text" id="name" name="name" placeholder="Имя" required="required"/>
-        </div>
+        <div class="-result"><div class="text"style="text-align:center;"><p>Ваша заявка принята!</p></div></div>
+        <div class="-form">
+            <div class="text"><p>Вы можете отправить нам заявку или задать интересующий Вас вопрос</p></div>
+            <div class="-row">
+                <input type="text" id="name" name="name" placeholder="Имя" required="required"/>
+            </div>
 
-        <div class="-row">
-            <input type="email" id="email" name="email" placeholder="E-Mail" required="required" />
-        </div>
+            <div class="-row">
+                <input type="email" id="email" name="email" placeholder="E-Mail" required="required" />
+            </div>
 
-        <div class="-row">
-            <input type="tel" id="phone" name="phone" placeholder="Телефон" required="required" />
-        </div>
+            <div class="-row">
+                <input type="tel" id="phone" name="phone" placeholder="Телефон" required="required" />
+            </div>
 
-        <div class="-row">
-        <textarea name="comment" id="comment" placeholder="Комментарий" required="required"></textarea>
-        </div>
+            <div class="-row">
+            <textarea name="comment" id="comment" placeholder="Комментарий" required="required"></textarea>
+            </div>
 
-        <div class="-row" style="text-align: center;">
-            <button>Отправить</button>
+            <div class="-row" style="text-align: center;">
+                <button>Отправить</button>
+            </div>
         </div>
     </div>
 </form>

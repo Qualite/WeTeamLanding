@@ -1,8 +1,11 @@
 $(document).ready(function() {
+    var inside, open;
+
     $('#send').click(function(e) {
         e.preventDefault();
 
         $('form').toggle();
+        open = 1;
     });
 
     $('#form').submit(function(e) {
@@ -25,9 +28,12 @@ $(document).ready(function() {
             },
             success: function( data ) {
                 if(data.status === 'ok') {
-                    $('.form-container').hide();
-                    $('.success').text('Спасибо, ' + $('.name').val() +'! Ваша заявка отправлена!');
-                    $('.success').show();
+                    $('.-form').hide();
+                    $('.-result').show();
+
+                    setTimeout(function() {
+                        $('#form').hide();
+                    }, 2000);
                 }
             },
             error: function( xhr, err ) {
@@ -36,3 +42,5 @@ $(document).ready(function() {
         });
     });
 });
+
+
